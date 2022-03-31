@@ -1,0 +1,12 @@
+integrations:
+  - name: nri-flex
+    interval: 120s
+    timeout: 91s
+    config:
+      name: vSphereAlarms
+      apis:
+        - event_type: vSphereAlarm
+         commands:
+          -run: "& \"C:/Program Files/New Relic/newrelic-infra/integrations.d/vSphereAlarms\""
+            shell: powershell
+            timeout: 90000
